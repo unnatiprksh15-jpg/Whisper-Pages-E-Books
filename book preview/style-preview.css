@@ -1,0 +1,190 @@
+  .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; /* gives spacing below each card */
+}
+
+.review-section {
+  margin-top: 20px;
+  text-align: center;
+}
+.review-section .like-btn.selected {
+  color: goldenrod;
+}
+
+.review-section .dislike-btn.selected {
+  color: crimson;
+}
+
+
+     .new-badge {
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      background-color: plum;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .container {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .container::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background: #999;
+      border-radius: 5px;
+    }
+
+    .card {
+      min-width: 250px;
+      max-width: 250px;
+      perspective: 1000px; /* Important for 3D effect */
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+       
+    }
+  
+
+    .no-flip {
+  cursor: pointer;
+}
+    /* .card.flipped .card-inner {
+  transform: rotateY(180deg);
+} */
+ .card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .front {
+      background: #fff;
+    }
+
+    .back {
+      background: lightblue;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .book-cover h1 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .book-cover h3,
+    .book-cover h4 {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    .copyright {
+      font-size: 10px;
+      color: #666;
+      padding: 5px;
+    }
+
+     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: plum;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      display: inline;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: orangered;
+    }
+    .left-section {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.left-section img {
+    width: 60px;
+    height: auto;
+}
