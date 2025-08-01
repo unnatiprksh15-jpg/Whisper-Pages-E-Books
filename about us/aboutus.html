@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Whisper Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: plum;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: orangered;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center; 
+            gap: 10px;
+        }
+
+        .left-section img {
+            width: 60px;
+            height: auto;
+        }
+
+        h1 {
+            background-color: plum;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #6a0dad;
+            border-bottom: 2px solid plum;
+            padding-bottom: 5px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 180px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card h3 {
+            color: #6a0dad;
+            margin-top: 0;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer {
+            background-color: plum;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+           .menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+    /* Responsive for screens below 768px */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: relative;
+    z-index: 5;
+    top: 60px;
+    right: 0;
+    background-color: lightgray;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .nav-links.active {
+    position: absolute;
+  display: flex;
+}
+}
+
+        .footer-container div {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-container h4 {
+  border-bottom: 2px solid #e94e1b;
+  padding-bottom: 5px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li {
+  margin: 8px 0;
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left-section">
+            < <a href="main.html"> <!-- Replace index.html with your homepage file -->
+  <img src="data:image/jpeg;base64,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" alt="eBook Store Logo" style="height: 50px;">
+</a>
+            <div class="logo">Whisper Pages</div>
+        </div>
+        <ul class="nav-links" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about-us/aboutus.html">About Us</a></li>
+      <li><a href="../book-preview/book-preview.html">Book-Preview</a></li>
+      <li><a href="../sign-up/sign-up.html">Login/Signup</a></li>
+      <li><a href="../contactus/contact-us.html">Contact</a></li>
+    </ul>
+        <div class="menu-icon" id="menuIcon">&#9776;</div> 
+    </nav>
+
+    <h1>About Whisper Pages</h1>
+
+    <div class="about-content">
+        <div class="section">
+            <h2>Our Story</h2>
+            <p>Welcome to Whisper Pages, your premier destination for discovering and purchasing e-books across various genres. Founded in 2020, we've grown from a small digital bookstore to a thriving platform with thousands of titles from both established and emerging authors.</p>
+            <p>Our mission is to connect readers with stories that inspire, educate, and entertain, while providing authors with a platform to share their work with the world.</p>
+        </div>
+
+        <div class="section">
+            <h2>What We Offer</h2>
+            <p>At Whisper Pages, we provide:</p>
+            <ul>
+                <li>A vast collection of e-books across multiple genres</li>
+                <li>Detailed book previews so you can sample before you buy</li>
+                <li>User ratings and reviews to help you make informed choices</li>
+                <li>Personalized recommendations based on your reading preferences</li>
+                <li>Secure and easy purchasing options</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Our Categories</h2>
+            <p>Explore our diverse collection of e-books organized into carefully curated categories:</p>
+            
+            <div class="categories">
+                <div class="category-card">
+                    <h3>Mythological</h3>
+                    <p>Discover ancient tales reimagined, including works by authors like Chitra Banerjee Divakuruni and Amish Tripathi.</p>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Fiction</h3>
+                    <p>From fantasy epics to contemporary novels, featuring authors like J.K. Rowling and Stephenie Meyer.</p>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Self-Help</h3>
+                    <p>Books to inspire personal growth, including titles by James Clear, Matt Haig, and Gabrielle Bernstein.</p>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Romance</h3>
+                    <p>Timeless love stories from classic authors like Jane Austen to modern romance novels.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Community Features</h2>
+            <p>Whisper Pages is more than just a bookstore - it's a community of readers. Our platform allows you to:</p>
+            <ul>
+                <li>Rate books with our like/dislike system</li>
+                <li>Write and read reviews from fellow book lovers</li>
+                <li>Create reading lists and share them with friends</li>
+                <li>Participate in monthly reading challenges</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Whisper Pages. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector("#menuIcon");
+const navLinks = document.querySelector(".nav-links");
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+    </script>
+
+    <footer style="  background: #333;  color: #fff;  padding: 20px 50px;">
+  <div class="footer-container" style=" display: flex;   justify-content: space-between;   flex-wrap: wrap;">
+    <div class="footer-about">
+      <h4>About Us</h4>
+      <p>Your trusted online bookstore offering a vast collection of eBooks, audiobooks, and exclusive previews. Read anytime, anywhere.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="../book-preview/book-preview.html">Books</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="../contactus/contact-us.html">Contact Us</a></li>
+        <li><a href="../tnc-policy/WhisperPages_Policy_and_TnC.pdf">Terms & Conditions</a></li>
+        <li><a href="../tnc-policy/WhisperPages_Policy_and_TnC.pdf">Privacy Policy</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: contact@whisperpages.com</p>
+      <p>Phone: +91 120 240 0973</p>
+      <p>Address: Whisper Pages World PVT LTD A-10, Sector 62, Noida
+Uttar Pradesh 201309, India</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p> &copy; 2025 Your Book Store. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
